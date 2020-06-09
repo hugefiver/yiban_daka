@@ -51,7 +51,7 @@ pip install requests
 
 - 将config.py下的账号密码换成自己的
 
-- 将config.py下的url换成刚复制的链接
+- 将config.txt下的url换成刚复制的链接
   
 #### 3.测试是否有未打卡的任务
 

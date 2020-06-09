@@ -49,4 +49,6 @@ if __name__ == '__main__':
         if submit_result.get('code') == 0:
             print(task_detail["Title"] + " 打卡成功")
             share_url = yb.getShareUrl(submit_result["data"])["data"]["uri"]
+            with open('config.txt') as f:
+                f.write(share_url)
             print("分享的链接为: " + share_url)
