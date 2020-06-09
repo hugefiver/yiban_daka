@@ -15,7 +15,7 @@
     │  submit.py        自动打卡脚本
     │  testSuccess.py   查看未打卡的任务
     │  utils.py         工具包,完成表单数据的提取和填充
-    │
+    │  config.txt       打卡分享链接
     └─yiban
         │  config.py    存放账号信息
         │  __init__.py  存放基础类
