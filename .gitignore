@@ -1,3 +1,6 @@
 .idea
 yiban/__pycache__/
 yiban/yiban/__pycache__/
+.vscode
+venv
+**/config.txt
