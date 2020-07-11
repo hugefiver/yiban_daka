@@ -2,9 +2,9 @@ import json
 import re
 
 from utils import form_data
-from yiban import yb
+from yiban import yb, CONFIG_TXT
 
-if __name__ == '__main__':
+def main():
     if yb.login() is None:
         print("帐号或密码错误,请确认账号密码密码无误后重试")
         exit(1)
@@ -49,6 +49,11 @@ if __name__ == '__main__':
         if submit_result.get('code') == 0:
             print(task_detail["Title"] + " 打卡成功")
             share_url = yb.getShareUrl(submit_result["data"])["data"]["uri"]
-            with open('config.txt') as f:
+            with open(CONFIG_TXT) as f:
                 f.write(share_url)
             print("分享的链接为: " + share_url)
+
+
+if __name__ == '__main__':
+    main()
+    

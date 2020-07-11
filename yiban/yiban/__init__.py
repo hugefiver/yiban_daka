@@ -2,7 +2,7 @@ import re
 
 import requests
 
-from yiban.config import ACCOUNT, PASSWD
+from yiban.config import ACCOUNT, PASSWD, CONFIG_TXT
 
 """
 author: wade
