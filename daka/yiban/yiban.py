@@ -2,22 +2,13 @@ import re
 
 import requests
 
-from yiban.config import ACCOUNT, PASSWD, CONFIG_TXT
-
-"""
-author: wade
-time: 2020-5-15 15:20
-Reference project: 
-- https://github.com/looyeagee/yiban_auto_submit 
-- https://github.com/Avenshy/YibanCheckin
-Reference link: 
-- https://looyeagee.cn/software/yiban
-"""
+from daka.yiban.config import ACCOUNT, PASSWD, CONFIG_TXT
+from daka.utils import rand_str
 
 
 class YiBan:
     WFId = "ecac36c256540165ec2fd412a33f50f8"  # 疫情表单：固定表单值固定 每个大学可能不一样需要自行抓包 此处为长沙理工大学0512更新
-    CSRF = "sui-bian-fang-dian-dong-xi"  # 随机值 随便填点东西
+    CSRF = rand_str(6)  # 随机值 随便填点东西
     COOKIES = {"csrf_token": CSRF}  # 固定cookie 无需更改
     HEADERS = {"Origin": "https://c.uyiban.com", "User-Agent": "yiban"}  # 固定头 无需更改
 

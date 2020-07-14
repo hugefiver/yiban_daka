@@ -1,8 +1,7 @@
 .idea
 .vscode
 
-yiban/__pycache__/
-yiban/yiban/__pycache__/
+**/__pycache__/
 
 venv
 dist

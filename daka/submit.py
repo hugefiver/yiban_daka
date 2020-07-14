@@ -1,8 +1,9 @@
 import json
 import re
 
-from utils import form_data
-from yiban import yb, CONFIG_TXT
+from daka.utils import form_data
+from daka.yiban import yb, CONFIG_TXT
+
 
 def main():
     if yb.login() is None:
@@ -49,11 +50,10 @@ def main():
         if submit_result.get('code') == 0:
             print(task_detail["Title"] + " 打卡成功")
             share_url = yb.getShareUrl(submit_result["data"])["data"]["uri"]
-            with open(CONFIG_TXT) as f:
+            with open(CONFIG_TXT, 'w') as f:
                 f.write(share_url)
             print("分享的链接为: " + share_url)
 
 
 if __name__ == '__main__':
     main()
-    
