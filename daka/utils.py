@@ -27,8 +27,8 @@ def parse_data(url):
     save_data = save_data_res.json()
     FormDataJson = save_data.get('Initiate')['FormDataJson']
     dict_form = {i.get('id'): i.get("value") for i in FormDataJson}
-    if '8992cd6ce8968fb4e7e75089fd73b641' not in dict_form:
-        dict_form['8992cd6ce8968fb4e7e75089fd73b641'] = '否'
+    # if '8992cd6ce8968fb4e7e75089fd73b641' not in dict_form:
+    #     dict_form['8992cd6ce8968fb4e7e75089fd73b641'] = '否'
     return json.dumps(dict_form)
 
 
