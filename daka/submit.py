@@ -40,7 +40,7 @@ def main():
         task_detail = yb.getTaskDetail(i["TaskId"])["data"]
         if task_detail["WFId"] != yb.WFId:
             print("表单已更新,得更新程序了")
-            exit()
+            # exit()
         ex = {"TaskId": task_detail["Id"],
               "title": "任务信息",
               "content": [{"label": "任务名称", "value": task_detail["Title"]},
