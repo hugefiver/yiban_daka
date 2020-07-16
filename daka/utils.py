@@ -1,10 +1,14 @@
 import json
+import os
 from random import choices
 
 import requests
 
 _BASE_CHARS = r'0123456789abcdefghijklmnopqrstuvwxyz' \
               r'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+
+is_cloud = os.environ.get('cloud_function') == '1'
 
 
 def rand_str(length: int) -> str:
