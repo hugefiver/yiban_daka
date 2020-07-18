@@ -1,13 +1,8 @@
 import json
 import re
 
-<<<<<<< HEAD
-from daka.utils import form_data, is_cloud
-from daka.yiban import yb, CONFIG_TXT, CLOUD_CONFIG_TXT
-=======
 from daka.utils import form_data
 from daka.yiban import yb, CONFIG_TXT
->>>>>>> parent of 98adbbc... fix the behavies when on cloud function env
 
 
 def main():
