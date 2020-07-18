@@ -2,7 +2,7 @@ import json
 import re
 
 from daka.utils import form_data, is_cloud
-from daka.yiban import yb, CONFIG_TXT
+from daka.yiban import yb, CONFIG_TXT, CLOUD_CONFIG_TXT
 
 
 def main():
@@ -52,5 +52,8 @@ def main():
             share_url = yb.getShareUrl(submit_result["data"])["data"]["uri"]
             if not is_cloud:
                 with open(CONFIG_TXT, 'w') as f:
+                    f.write(share_url)
+            else:
+                with open(CLOUD_CONFIG_TXT, 'w') as f:
                     f.write(share_url)
             print("分享的链接为: " + share_url)

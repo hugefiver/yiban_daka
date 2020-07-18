@@ -7,7 +7,6 @@ import requests
 _BASE_CHARS = r'0123456789abcdefghijklmnopqrstuvwxyz' \
               r'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-
 is_cloud = os.environ.get('cloud_function') == '1'
 
 

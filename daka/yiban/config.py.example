@@ -2,6 +2,7 @@ import os
 
 _BASE_PATH = os.path.split(os.path.abspath(__file__))[0]
 CONFIG_TXT = os.path.join(_BASE_PATH, '../config.txt')
+CLOUD_CONFIG_TXT = '/mnt/yiban_share_url.txt'
 
 # 手机号-密码
 ACCOUNT = ''
