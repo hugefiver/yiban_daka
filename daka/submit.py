@@ -58,3 +58,7 @@ def main():
             with open(CONFIG_TXT, 'w') as f:
                 f.write(share_url)
             print("分享的链接为: " + share_url)
+
+
+if __name__ == '__main__':
+    main()
