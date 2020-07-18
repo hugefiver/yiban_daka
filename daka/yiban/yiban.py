@@ -1,10 +1,9 @@
 import re
-import os
 
 import requests
 
-from daka.yiban.config import ACCOUNT, PASSWD, CONFIG_TXT, CLOUD_CONFIG_TXT
-from daka.utils import rand_str, is_cloud
+from daka.yiban.config import ACCOUNT, PASSWD, CONFIG_TXT
+from daka.utils import rand_str
 
 
 class YiBan:
