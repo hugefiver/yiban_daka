@@ -1,8 +1,13 @@
 import json
 import re
 
+<<<<<<< HEAD
 from daka.utils import form_data, is_cloud
+from daka.yiban import yb, CONFIG_TXT, CLOUD_CONFIG_TXT
+=======
+from daka.utils import form_data
 from daka.yiban import yb, CONFIG_TXT
+>>>>>>> parent of 98adbbc... fix the behavies when on cloud function env
 
 
 def main():
@@ -50,9 +55,8 @@ def main():
         if submit_result.get('code') == 0:
             print(task_detail["Title"] + " 打卡成功")
             share_url = yb.getShareUrl(submit_result["data"])["data"]["uri"]
-            if not is_cloud:
-                with open(CONFIG_TXT, 'w') as f:
-                    f.write(share_url)
+            with open(CONFIG_TXT, 'w') as f:
+                f.write(share_url)
             print("分享的链接为: " + share_url)
 
 
